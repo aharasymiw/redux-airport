@@ -1,0 +1,33 @@
+thead {
+    background-color: rgb(210, 210, 210);
+}
+
+th {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 1em;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(239, 239, 239);
+}
+
+tr {
+    height: 2em;
+}
