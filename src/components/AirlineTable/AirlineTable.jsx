@@ -9,10 +9,23 @@ function AirlineTable() {
     return (
         <table>
             <thead>
-                <tr><th>Bad Airlines</th></tr>
+                <tr>
+                    <th>Bad Airlines</th>
+                    <th>Bad Jets</th>
+                </tr>
             </thead>
             <tbody>
-                {airlines.map((airline) => { return (<tr key={airline}><td>{airline}</td></tr>) })}</tbody></table>
+                {airlines.map((airline) => {
+                    return (
+                        <tr key={airline.name}>
+                            <td>{airline.name}</td>
+                            <td>{airline.jetQuantity}</td>
+                        </tr>
+                    )
+                })
+                }
+            </tbody>
+        </table>
     )
 }
 

@@ -8,12 +8,13 @@ import { Profider, Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 /** TODO: Add REDUCERS */
-const airlines = (state = ['Ryan Air', 'Spirt', 'Sun Country', 'Jet Blue', 'SouthWest'], action) => {
+const airlines = (state = [{ name: 'Ryan Air', jetQuantity: 5 }, { name: 'Spirt', jetQuantity: 7 }, { name: 'Sun Country', jetQuantity: 2 }, { name: 'Jet Blue', jetQuantity: 20 }, { name: 'SouthWest', jetQuantity: 9 }], action) => {
     if (action.type === 'ADD_AIRLINE') {
-        const airlineName = action.payload;
+        const name = action.payload.name;
+        const jetQuantity = action.payload.jetQuantity;
 
         // The Vang method:
-        return [...state, airlineName];
+        return [...state, {name: name, jetQuantity: jetQuantity}];
 
         // //  1. Make a copy of state.
         // const copyOfState = [..state];
